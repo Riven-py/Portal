@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700;900&display=swap');
+
+body {
+    background-image: url('resources/background1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+}
+
+
+a {
+    color: white;
+}
+
+
+.navbar {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 7%;
+    padding-right: 7%;
+    background-color: rgba(0,0,0,.07);
+}
+
+.nav-buttons ul {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+    align-items: center;
+}
+
+.remember-me {
+    color: white;
+    font-family: 'Century Gothic';
+    font-size: small;
+    margin: 2px;
+    margin-left: -5px;
+}
+#remember-me {
+    text-align: start;
+}
+
+#check-remember {
+    align-self: flex-start;
+}
+
+.nav-logo {
+    display:flex;
+    align-items: center;
+
+}
+
+.nav-logo p {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    color: white;
+
+    padding-left: 5%;
+    font-size: larger;
+}
+
+.nav-buttons ul li {
+    font-family: 'League Spartan', sans-serif;
+    color: white;
+    font-size: large;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.balance-status {
+    list-style : none;
+}
+
+
+.nav-buttons ul button {
+	background-color:#ffd950;
+	border-radius:5px;
+    border-color: #ffd950;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family: 'Century Gothic';
+    font-weight:400;
+	padding:10px 30px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #000000;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+#logo {
+    width: 70px;
+    height: 70px;
+}
+
+.nav-buttons ul:hover {
+    cursor:pointer;
+}
+
+.login-button:active {
+	position:relative;
+	top:1px;
+}
+
+
+.nav-buttons ul button:active {
+	position:relative;
+	top:1px;
+}
+
+#mobile-p {
+    display: none;
+}
+
+
+.login-container {
+    display: flex;
+    padding-top: 10vh;
+    justify-content: center;
+}
+
+.login-block {
+    display: flex;
+    padding: 1vw 7vh;
+    background-color:#050a30 ;
+    border-radius: 28px;
+    opacity: 0.95;
+}
+
+.login-block-grid {
+    display: grid;
+    grid-template-columns: 10vh 15vh 10vh ;
+    grid-template-rows: 0.7fr 1fr 0.1fr;
+    align-items: center;
+    text-align: center;
+}
+
+.login-align-center {
+    text-align: center;
+    align-items: center;
+}
+
+.login-logo {
+    grid-row: 1 / 1;
+    grid-column: 1 / 4;
+}
+
+
+#id {
+    padding: 2%;
+    margin-bottom: 4%;
+    margin-top: 2%;
+    width: 31vh;
+}
+
+#password {
+    padding: 2%;
+    width: 31vh;
+}
+
+#label {
+    color: white;
+    font-family: 'League Spartan', 'Sans Serif';
+    padding: 5%;
+}
+
+.login-form {
+    grid-row: 2 / -2;
+    grid-column: -4 / -1; 
+}
+
+.login-button {
+	background-color:#ffd950;
+	border-radius:5px;
+    width: 33vh;
+	border:1px solid #c8f500;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:17px;
+	padding:1vh 5vh;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+    margin-top: 5%;     
+}
+
+.login-options {
+    font-family: 'Century Gothic';
+    color: #FFD950;
+    padding-top: 10px;
+    font-size: small;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap:3vh;
+}
+
+/* LANDSCAPE WIDTH */
+
+@media screen and (max-width: 940px)  {
+    .nav-logo p {
+        padding-left: 8%;
+        display: none;
+
+    }
+    .login-block {
+        padding: 3vw;
+    }
+    #mobile-p {
+        display: inline-block;
+    }
+}
+
+
+@media screen and (max-width: 760px)  {
+    .nav-logo p {
+        padding-left: 9%;
+    }
+}
+
+
+/* MOBILE LANDSCAPE USERS */
+
+@media screen and (max-width: 440px)  {
+    .nav-logo p {
+        padding-left: 17%;
+        display: none;
+    }
+    .nav-buttons ul li{
+        display:none;
+    }
+
+    .login-block {
+        padding: 4vw;
+    }
+
+}
+
+@media screen and (max-width: 376px)  {
+    .nav-logo p {
+        padding-left: 19%;
+        display: none;
+    }
+    .nav-buttons ul li{
+        display:none;
+    }
+    #mobile-p {
+        display: inline-block;
+        padding-top: 1%;
+    }
+    
+    .login-block {
+        padding: 4vw 4vh;
+    }
+
+}

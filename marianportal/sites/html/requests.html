@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'requests.css'%}">
+    <title>Attendance</title>
+    <link rel="icon" href="{% static 'favicon.ico '%}">
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-container">
+            <header class ="navbar"> 
+                <div class="nav-logo">
+                    <a><img src="{% static 'resources\hamburger.png '%}" style="margin-top: 3px;"></a>
+                    <img id='logo' src="{% static 'resources\logo.png '%}">
+                    <a id="learn-a" href="learn.html">Learn</a>
+                    <a id="">Participate</a>
+                    <a id="dropdown-mobile"><img src="{% static 'resources\dropdown.png '%}" id="dropdown2"></a>
+                </div>
+                <div class="nav-buttons">
+                    <ul>
+                        <li> 
+                            <input type="text" class="search-bar" placeholder=" Search Resource">
+                        </li>
+                        <li><a><img id="resources"src="{% static 'resources\book.png '%}"/></a></li>
+                        <li><a><img id="resources"src="{% static 'resources\notification.png '%}"/></a></li>                        
+                        <li><a id="nameplaceholder">FIRST NAME</a></li>
+                        <li><a><img src="{% static 'resources\dropdown.png '%}" id="dropdown"></a></li>
+                    </ul>
+                </div>
+            </header>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-grid">
+        <div class="tree">
+            <a href="learn.html"> Learn </a>
+            <a> / </a>
+            <a href="/profile/">Profile</a>
+            <a> / </a>
+            <a href="/profile/requests/"> Requests</a>
+        </div>
+        <div class="form">
+            <div class="title-request">
+                <a id="move">SEND A REQUEST</a>
+                </div>
+            </div>
+            <form class="request-t">
+                <div class="request-prompt">
+                    <label>Request Type</label>
+                    <input>
+                </div>
+                <div class="message-box">
+                    <label>Message</label>
+                    <input>
+                </div>
+                <div class="submit-button">
+                    <button>Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</body>

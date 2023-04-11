@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main.css'%}">
+    <title>Log in</title>
+    <link rel="icon" href="{% static 'favicon.ico'%}">
+</head>
+<body>
+
+<!--NAV BAR START--> 
+
+    <div class="nav">
+        <div class="nav-container">
+            <header class ="navbar"> 
+                <div class="nav-logo">
+                        <img id='logo' src="{% static 'resources/logo.png '%}">
+                        <p> ST. MARY'S
+                        ACADEMY OF HAGONOY</p>
+                        <p id="mobile-p">ST. MARY'S <br>
+                        ACADEMY</p>
+                </div>
+                <div class="nav-buttons">
+                    <ul>
+                        <li> <a href="#">About</a></li>
+                        <li> | </li>
+                        <button>Enroll</button>
+                    </ul>
+                </div>
+            </header>
+            </div>
+        </div>
+    </div>
+
+<!--NAV BAR END-->
+
+    <div class="login-container">
+        <div class="login-block">
+            <div class="login-block-grid">
+                <div class="login-logo">
+                    <img id="logo" src="{% static 'resources/logo.png '%}" style="width: auto;height: 15vh;">
+                </div>
+                <div class="login-form">
+                    <form>
+                    <label  id="label"for="id">Welcome Back, Ignacian Marian!</label> <br>
+                    <input type="text" id="id" name="id" required minlength="6" maxlength="6" size="30vw" placeholder="Student ID"> <br>
+                    <input type="password" id="password" name="password" required minlength="6" size="30vw" placeholder="Password"> <br>
+                    <button class="login-button">Login</button>
+                    </form>
+                    <div class="login-options">
+                        <div class="remember-me">
+                            <input type="checkbox" name="remember" id="check-remember"> <label for="remember">Remember Me</label> 
+                        </div>
+                        <a>Forgot Password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

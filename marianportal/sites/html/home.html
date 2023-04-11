@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'home.css'%}">
+    <title>Dashboard</title>
+    <link rel="icon" href="{% static 'favicon.ico '%}">
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-container">
+            <header class ="navbar"> 
+                <div class="nav-logo">
+                    <a><img src="{% static 'resources\hamburger.png '%}" style="margin-top: 3px;"></a>
+                    <img id='logo' src="{% static 'resources\logo.png '%}">
+                    <a id="learn-a" href="/landing/">Learn</a>
+                    <a id="">Participate</a>
+                    <a id="dropdown-mobile"><img src="{% static 'resources\dropdown.png '%}" id="dropdown2"></a>
+                </div>
+                <div class="nav-buttons">
+                    <ul>
+                        <li> 
+                            <input type="text" class="search-bar" placeholder=" Search Resource">
+                        </li>
+                        <li><a><img id="resources"src="{% static 'resources\book.png '%}"/></a></li>
+                        <li><a><img id="resources"src="{% static 'resources\notification.png '%}"/></a></li>                        
+                        <li><a id="nameplaceholder">FIRST NAME</a></li>
+                        <li><a><img src="{% static 'resources\dropdown.png '%}" id="dropdown"></a></li>
+                    </ul>
+                </div>
+            </header>
+            </div>
+        </div>
+    </div>
+
+    <div class="block-container">
+        <div class="encompass"></div>
+        <div class="tree">
+            <a href="/landing/">Learn</a>
+            <a> / </a>
+            <a href="/profile/">Profile</a>
+        </div>
+        <div class="name-holder">
+            <div class="name-picture"></div>
+            <div class="name-name">
+                <a class="bold">LAST,</a>
+                <a>First</a>
+                <a>MI</a>
+            </div>
+            <div class="name-id">
+                <a class="bold"> ID Number</a> <a> 00-0000</a>
+            </div>
+            <div class="name-section">
+                <a class="bold">Grade and <br>Section</a> <a> Placeholder</a>
+            </div>
+            <div class="name-buttons">
+                <button>Edit Profile</button>
+                <button>Reset Info</button>
+            </div>
+        </div>
+        <div class="balance-holder">
+            <div class="balance-balance">
+                <a class="bold">BALANCE</a>
+                <a id="center">P 1000</a>
+
+            </div>
+            <div class="balance-requests">
+                <a class="bold">Pending Requests</a>
+                <a id="center"> You have no pending requests</a>
+            </div>
+        </div>
+        <div class="idk"></div>
+    </div>
+</body>
+</html>
