@@ -36,6 +36,7 @@ class CustomUser(AbstractUser):
     uid = models.CharField(default="A1A1A1A1", verbose_name='RFID', max_length=8)
     picture = models.FileField(upload_to='id_pictures/', null=True)
 
+    attached_phone = models.CharField(max_length=13, default = '+631234567890')
    
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['first_name', 'middle_initial', 'last_name']
