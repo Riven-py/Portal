@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'enroll.css'%}">
+    <title>Enroll</title>
+    <link rel="icon" href="{% static 'favicon.ico'%}">
+</head>
+<body>
+
+<!--NAV BAR START--> 
+
+    <div class="nav">   
+        <div class="nav-container">
+            <header class ="navbar"> 
+                <div class="nav-logo">
+                        <img id='logo' src="{% static 'resources/logo.png '%}">
+                        <p> ST. MARY'S
+                        ACADEMY OF HAGONOY</p>
+                        <p id="mobile-p">ST. MARY'S <br>
+                        ACADEMY</p>
+                </div>
+                <div class="nav-buttons">
+                    <ul>
+                        <li> <a href="#">About</a></li>
+                        <li> | </li>
+                        <a href="enroll/">
+                            <button>Enroll</button>
+                        </a>
+                    </ul>
+                </div>
+            </header>
+            </div>
+        </div>
+    </div>
+
+<!--NAV BAR END-->  
+
+    <div class="login-container">
+        <div class="login-block">
+            <div class="login-block-grid">
+
+                <div class="login-form">
+                        <h1 class="vali">Your Request has now been validated.</h1>
+                        <p class="vali">For further information please check your attached email.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

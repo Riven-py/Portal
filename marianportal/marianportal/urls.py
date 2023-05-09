@@ -20,8 +20,12 @@ from sites.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('landing/', landing, name="Learn"),
-    path('', main_html , name = "enroll"),
+    path('', main_html , name = "home"),
     path('profile/attendance/', attendance, name="attendance"),
     path('profile/',home, name="Home"),
-    path('profile/requests/', requests, name="requests")
+    path('profile/requests/', requests, name="requests"),
+    path('logout/', logout_view, name="logout"),
+    path('enroll/', enroll, name="Enroll"),
+    path('sendmodule/', sendmodule, name='formsend'),
+    path('success/', success, name='Success'),
 ]

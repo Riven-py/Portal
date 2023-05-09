@@ -5,6 +5,10 @@ body {
     font-family: 'Century Gothic';
 }
 
+.bcolor {
+    color: #3665c3 !important;
+}
+
 a:visited {
     color: #3665c3;
 }
@@ -67,6 +71,7 @@ a:visited {
     font-family: 'League Spartan', 'sans-serif';
     font-weight: 700;
     margin: 0;
+    color: white;
 }
 
 #resources {
@@ -138,13 +143,12 @@ a {
     display: none;
 }
 
-
 /* NAVBAR ENDS */
 
 .main-grid {
     display: grid;
     height: 100vh;
-    grid-template-rows: 0.15fr 0.1fr 0.5fr 0.8fr;
+    grid-template-rows: 0.15fr 0.1fr 0.8fr 0.8fr;
     grid-template-columns: 0.75fr 0.25fr;
 }
 
@@ -204,6 +208,7 @@ a {
     border-width: 1px;
     border-radius: 5px;
     margin-right: 1vw;
+    z-index: 5;
 }
 
 .short-nav {
@@ -217,7 +222,7 @@ a {
     border-color: #b9b9b9;
     border-width: 1px;
     display: grid;
-    grid-template-rows: 1.4fr 1fr 1fr 1fr 0.6fr;
+    grid-template-rows: 1.7fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
     justify-content: center;
     align-items: center;
 }
@@ -234,4 +239,8 @@ a {
 
 .bold {
     font-weight: bolder;
+}
+
+.buttons button:hover {
+    background-color: #E1E6ED;
 }

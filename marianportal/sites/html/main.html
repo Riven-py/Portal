@@ -27,7 +27,9 @@
                     <ul>
                         <li> <a href="#">About</a></li>
                         <li> | </li>
-                        <button>Enroll</button>
+                        <a href="enroll/">
+                            <button>Enroll</button>
+                        </a>
                     </ul>
                 </div>
             </header>
@@ -35,7 +37,7 @@
         </div>
     </div>
 
-<!--NAV BAR END-->
+<!--NAV BAR END-->  
 
     <div class="login-container">
         <div class="login-block">
@@ -44,11 +46,19 @@
                     <img id="logo" src="{% static 'resources/logo.png '%}" style="width: auto;height: 15vh;">
                 </div>
                 <div class="login-form">
-                    <form>
+                    <form method="POST"> 
+                    {% csrf_token %}
+                    
                     <label  id="label"for="id">Welcome Back, Ignacian Marian!</label> <br>
-                    <input type="text" id="id" name="id" required minlength="6" maxlength="6" size="30vw" placeholder="Student ID"> <br>
+                    <input type="text" id="id" name="id" required minlength="5" maxlength="7" size="30vw" placeholder="Student ID"> <br>
                     <input type="password" id="password" name="password" required minlength="6" size="30vw" placeholder="Password"> <br>
-                    <button class="login-button">Login</button>
+                    {% if error %}
+
+                        <a style="color: rgb(255, 75, 75)">{{error}}</a>
+
+                    {% endif %}
+                    <button type="submit" class="login-button">Login</button>
+                    
                     </form>
                     <div class="login-options">
                         <div class="remember-me">

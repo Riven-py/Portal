@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-$8*t*%^u^q-)molu&-fx_3q-dt#3fjq4b*u%nc!u4)#()#3p4@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.5.185', '127.0.0.1', '192.168.91.122', '192.168.169.122', '*']
 
 
 # Application definition
@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sites',
+    'sweetify',
+    'multiselectfield',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +127,12 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'sites.CustomUser'
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_ACCESS_KEY_ID = 'AKIAW2T2FT5Z63S5XXDQ'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'staticsources'
+AWS_S3_REGION_NAME = 'ap-southeast-1'
+AWS_QUERYSTRING_AUTH = True

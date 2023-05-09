@@ -3,23 +3,25 @@
 <head>
     {% load static %}
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'sweetify/sweetalert.css' %}">
     <link rel="stylesheet" href="{% static 'learn.css'%}">
     <title>Learn</title>
     <link rel="icon" href="{% static 'favicon.ico '%}">
 </head>
 <body>
-
     <div class="nav">
         <div class="nav-container">
             <header class ="navbar"> 
                 <div class="nav-logo">
-                    <a><img src="{% static 'resources\hamburger.png '%}" style="margin-top: 3px;"></a>
                     <img id='logo' src="{% static 'resources\logo.png '%}">
                     <a id="learn-a" href="/landing/">Learn</a>
                     <a id="">Participate</a>
-                    <a id="dropdown-mobile"><img src="{% static 'resources\dropdown.png '%}" id="dropdown2"></a>
+                    <a href="{%url 'logout'%}"id="dropdown-mobile"><img src="{% static 'resources\dropdown.png '%}" id="dropdown2"></a>
                 </div>
                 <div class="nav-buttons">
                     <ul>
@@ -28,8 +30,11 @@
                         </li>
                         <li><a><img id="resources"src="{% static 'resources\book.png '%}"/></a></li>
                         <li><a><img id="resources"src="{% static 'resources\notification.png '%}"/></a></li>                        
-                        <li><a id="nameplaceholder">FIRST NAME</a></li>
-                        <li><a><img src="{% static 'resources\dropdown.png '%}" id="dropdown"></a></li>
+                        <li><a href="/profile" id="nameplaceholder">{{user_first_name|upper}}</a></li>
+                        <li><a><img src="{% static 'resources\hamburger.png '%}" style="margin-top: 3px;"></a></li>
+                            </div>
+                          </div>
+                        </li>
                     </ul>
                 </div>
             </header>
@@ -47,13 +52,28 @@
             <button>Timeline</button>
             <button>My Subjects</button>
         </div>
-        <div class="timeline"></div>
-        <div class="subjects"></div>
+        <div class="timeline">
+            
+        </div>
+        <div class="subjects">
+            {% for module in modules %}
+            <div>
+                <h2>{{ module.title }}</h2>
+                <p>{{ module.description }}</p>
+                <a href="{{ module.file.url }}">Download</a>
+            </div>
+        {% endfor %}
+        </div>
         <div class="short-nav">
-            <a class="bold">Welcome, First Name!</a>
-            <a href="/profile/">Profile</a>
-            <a href="/profile/attendance/">Attendance</a>
-            <a href="/profile/requests/">Requests</a>
+            <a id="welcome" class="bold">Welcome, {{user_first_name}}!</a>
+            <a class="bcolor" href="/profile/">Profile</a>
+            <a class="bcolor" href="/profile/attendance/">Attendance</a>
+            <a class="bcolor" href="/profile/requests/">Requests</a>
+            {% if role == 'Teacher' %}
+            <a class="bcolor" href="/sendmodule/"> Upload Module</a>
+            {%endif%}
+            <a href="/logout/">Log Out</a>
+
         </div>
     </div>
     

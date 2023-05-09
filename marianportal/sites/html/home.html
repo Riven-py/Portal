@@ -14,11 +14,10 @@
         <div class="nav-container">
             <header class ="navbar"> 
                 <div class="nav-logo">
-                    <a><img src="{% static 'resources\hamburger.png '%}" style="margin-top: 3px;"></a>
                     <img id='logo' src="{% static 'resources\logo.png '%}">
                     <a id="learn-a" href="/landing/">Learn</a>
-                    <a id="">Participate</a>
-                    <a id="dropdown-mobile"><img src="{% static 'resources\dropdown.png '%}" id="dropdown2"></a>
+                    <a href="{%url 'Enroll'%}">Participate</a>
+                    <a href="{%url 'logout'%}"id="dropdown-mobile"><img src="{% static 'resources\dropdown.png '%}" id="dropdown2"></a>
                 </div>
                 <div class="nav-buttons">
                     <ul>
@@ -27,8 +26,11 @@
                         </li>
                         <li><a><img id="resources"src="{% static 'resources\book.png '%}"/></a></li>
                         <li><a><img id="resources"src="{% static 'resources\notification.png '%}"/></a></li>                        
-                        <li><a id="nameplaceholder">FIRST NAME</a></li>
-                        <li><a><img src="{% static 'resources\dropdown.png '%}" id="dropdown"></a></li>
+                        <li><a href="/profile" id="nameplaceholder" style="color:white">{{user_first_name|upper}}</a></li>
+                        <li><a><img src="{% static 'resources\hamburger.png '%}" style="margin-top: 3px;"></a></li>
+                            </div>
+                          </div>
+                        </li>
                     </ul>
                 </div>
             </header>
@@ -44,17 +46,19 @@
             <a href="/profile/">Profile</a>
         </div>
         <div class="name-holder">
-            <div class="name-picture"></div>
+            <div class="name-picture">
+                <img src="{{ picture }}">
+            </div>
             <div class="name-name">
-                <a class="bold">LAST,</a>
-                <a>First</a>
-                <a>MI</a>
+                <a class="bold">{{ user_last_name |upper}},</a>
+                <a>{{ user_first_name }}</a>
+                <a>{{user_middle_initial}}.</a>
             </div>
             <div class="name-id">
-                <a class="bold"> ID Number</a> <a> 00-0000</a>
+                <a class="bold"> ID Number</a> <a> {{user_username}}</a>
             </div>
             <div class="name-section">
-                <a class="bold">Grade and <br>Section</a> <a> Placeholder</a>
+                <a class="bold">Grade and <br>Section</a> <a> {{ user_gr}}</a>
             </div>
             <div class="name-buttons">
                 <button>Edit Profile</button>
@@ -64,7 +68,7 @@
         <div class="balance-holder">
             <div class="balance-balance">
                 <a class="bold">BALANCE</a>
-                <a id="center">P 1000</a>
+                <a id="center">P {{ balance }}</a>
 
             </div>
             <div class="balance-requests">
