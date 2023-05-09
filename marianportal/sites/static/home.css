@@ -86,7 +86,6 @@ a:visited {
     padding: 0.7vh;
     margin-bottom: 0.5vh;
     width: 13vw;
-    heigh;
 }
 
 /**
@@ -263,7 +262,6 @@ a:visited {
 
 .name-holder {
     display: grid;
-    height: ;
     grid-template-rows: 1fr 0.5fr 0.5fr 1fr;
     grid-template-columns: 1fr 2.7fr;
 }
