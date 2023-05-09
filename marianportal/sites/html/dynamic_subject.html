@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'sweetify/sweetalert.css' %}">
     <link rel="stylesheet" href="{% static 'learn.css'%}">
-    <title>Learn</title>
+    <title> {{subject.name}} </title>
     <link rel="icon" href="{% static 'favicon.ico '%}">
 </head>
 <body>
@@ -48,25 +48,25 @@
             <a> / </a>
         </div>
         <div class="background-color"></div>
-        <div class="buttons">
-            <button>My Subjects</button>
-        </div>
         <div class="timeline">
             
         </div>
         <div class="subjects">
 
-            {% for subject in subjects %}
-            <div class="subject-name">
-                <a href="{% url 'subject_detail' subject_id=subject.id %}">{{ subject.name }}</a>
-            </div>
+            <h1>{{ subject.name }}</h1>
+            <p><b>Grade & Section:</b>   {{ subject.gr_section }}</p>
+            <p><b>Teacher:</b> {{ subject.teacher }}</p>
+
+
+            {% for module in modules %}
+
+                <div class="subject-name-2">
+                    <h2>{{ module.title }}</h2>
+                    <p>{{ module.description }}</p>
+                    <a href="{{ module.file.url }}">{{ module.file }} </a>                 </a>
+                </div>
+
             {% endfor %}
-                        
-            {% for subject in teacher_subjects %}
-            <div class="subject-name">
-                <a href="{% url 'subject_detail' subject_id=subject.id %}">{{ subject.name }}</a>  
-            </div>
-        {% endfor %}
         
         </div>
         <div class="short-nav">

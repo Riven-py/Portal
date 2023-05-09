@@ -145,11 +145,15 @@ a {
 
 /* NAVBAR ENDS */
 
+.subjects {
+    padding-top: 3vh;
+}
+
 .main-grid {
     display: grid;
-    height: 100vh;
-    grid-template-rows: 0.15fr 0.1fr 0.8fr 0.8fr;
-    grid-template-columns: 0.75fr 0.25fr;
+    height: 140vh;
+    grid-template-rows: 0.25fr 0.3fr 1.2fr 2.8fr;
+    grid-template-columns: 0.79fr 0.25fr;
 }
 
 .tree {
@@ -243,4 +247,42 @@ a {
 
 .buttons button:hover {
     background-color: #E1E6ED;
+}
+
+.subjects {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subject-name {
+    background-color: #f7f7f7;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    color: #3665c3;
+    margin: 1vh;
+    display: block;
+    font-size: 30px;
+    width: 60vw;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subject-name-2 {
+    background-color: #f7f7f7;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    margin-top: 2vh;
+    display: block;
+    font-size: 20px;
+    width: 40vw;
+    padding-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

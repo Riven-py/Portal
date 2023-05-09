@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
-from .models import CustomUser, Module
+from .models import CustomUser, Module, Subject
 
 class CustomUserCreationForm(UserCreationForm):
 
@@ -22,5 +22,5 @@ class UploadForm(forms.ModelForm):
         
     class Meta:
         model = Module
-        fields = ['file', 'title', 'description', 'grade_section',]
+        fields = ['file', 'title', 'description', 'subject']
         widgets = {'uploaded_by': forms.HiddenInput()}
