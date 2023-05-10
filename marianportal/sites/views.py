@@ -1,10 +1,10 @@
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect, get_object_or_404
 from django.conf import settings
-from django.views.decorators.cache import cache_control, cache_page
+from django.views.decorators.cache import cache_control
 import boto3
 from .forms import UploadForm
-from .models import Module, Section, Subject
+from .models import Module, Subject
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
@@ -242,7 +242,7 @@ def subject_detail(request, subject_id):
     user_gr = user_data.get('gr_section')
     subject = get_object_or_404(Subject, id=subject_id)
     teacher_subjects = Subject.objects.filter(teacher_id=user_id)
-    modules = Module.objects.filter(id=subject_id)
+    modules = Module.objects.filter(subject=subject)
     
     return render(request, 'dynamic_subject.html', 
                   {'subject': subject,
@@ -255,3 +255,4 @@ def subject_detail(request, subject_id):
                     'modules' : modules,
                     'teacher' : teacher_subjects,
                    })
+
