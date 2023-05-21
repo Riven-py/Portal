@@ -50,7 +50,7 @@ class CustomUserAdmin(UserAdmin):
             return self.add_fieldsets
         fieldsets = super().get_fieldsets(request, obj)
         if obj.role == 'Teacher':
-            fieldsets[1][1]['fields'] = ('first_name', 'middle_initial', 'last_name', 'picture', 'assigned_sections')
+            fieldsets[1][1]['fields'] = ('first_name', 'middle_initial', 'last_name', 'picture')
         else:
             fieldsets[1][1]['fields'] = ('first_name', 'middle_initial', 'last_name', 'picture')
         return fieldsets

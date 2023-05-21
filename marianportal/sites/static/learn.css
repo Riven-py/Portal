@@ -150,7 +150,6 @@ a {
 
 .main-grid {
     display: grid;
-    height: 140vh;
     grid-template-rows: 0.25fr 0.3fr 1.2fr 2.8fr;
     grid-template-columns: 0.79fr 0.25fr;
 }
@@ -228,6 +227,7 @@ a {
     grid-template-rows: 1.7fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
     justify-content: center;
     align-items: center;
+    height: 13vw;
 }
 
 .background-color {
