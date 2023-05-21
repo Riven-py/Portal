@@ -28,4 +28,6 @@ urlpatterns = [
     path('enroll/', enroll, name="Enroll"),
     path('sendmodule/', sendmodule, name='formsend'),
     path('success/', success, name='Success'),
+    path('subjects/<int:subject_id>/', subject_detail, name='subject_detail'),
+    path('test', sendmodule, name='test')
 ]

@@ -76,7 +76,13 @@
                 <a id="center"> You have no pending requests</a>
             </div>
         </div>
-        <div class="idk"></div>
+        <div class="idk">
+            {%for subjects in subject%}
+                <div class="subjects-name-home">
+                    <p>{{subjects.name}}</p>
+                </div>
+            {%endfor%}
+        </div>
     </div>
 </body>
 </html>
